@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J.A.R.V.I.S. Core Interface</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="/eel.js"></script>
+    <!-- Include Three.js for 3D elements -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+    <div class="hud-container">
+        
+        <!-- TOP BAR -->
+        <header class="top-bar glass-panel">
+            <div class="system-status">
+                <span class="status-indicator online pulse"></span>
+                <span>SYSTEM ONLINE</span>
+            </div>
+            <div class="jarvis-logo">J.A.R.V.I.S.</div>
+            <div class="clock" id="current-time">00:00:00</div>
+        </header>
+
+        <!-- MAIN CONTENT AREA -->
+        <main class="dashboard">
+            
+            <!-- LEFT PANEL: System Stats -->
+            <aside class="left-panel glass-panel">
+                <h2>SYSTEM DIAGNOSTICS</h2>
+                <div class="stat-box">
+                    <span>CORE USAGE</span>
+                    <div class="progress-bar"><div class="fill" id="cpu-fill" style="width: 0%;"></div></div>
+                    <span class="stat-value" id="cpu-val">0%</span>
+                </div>
+                <div class="stat-box">
+                    <span>MEMORY MAPPINGS</span>
+                    <div class="progress-bar"><div class="fill" id="ram-fill" style="width: 0%;"></div></div>
+                    <span class="stat-value" id="ram-val">0%</span>
+                </div>
+                <div class="stat-box">
+                    <span>POWER RESERVES</span>
+                    <div class="progress-bar"><div class="fill" id="bat-fill" style="width: 0%;"></div></div>
+                    <span class="stat-value" id="bat-val">100%</span>
+                </div>
+                <div class="stat-box">
+                    <span>NETWORK UPLINK</span>
+                    <span class="stat-value highlight" id="net-val">ACTIVE</span>
+                </div>
+            </aside>
+
+            <!-- CENTER: Reactor Core -->
+            <section class="center-panel">
+                <div class="reactor-container">
+                    <!-- Rings & Glow -->
+                    <div class="ring ring-outer"></div>
+                    <div class="ring ring-middle"></div>
+                    <div class="ring ring-inner"></div>
+                    <div class="core" id="ai-core"></div>
+                    <div class="radar-sweep"></div>
+                </div>
+                <div class="status-text" id="ai-status">AWAITING INPUT</div>
+            </section>
+
+            <!-- RIGHT PANEL: Activity Log -->
+            <aside class="right-panel glass-panel">
+                <h2>ACTIVITY LOG</h2>
+                <div class="log-container" id="activity-log">
+                    <div class="log-entry system">> J.A.R.V.I.S. initialized.</div>
+                    <div class="log-entry system">> All systems nominal.</div>
+                </div>
+            </aside>
+
+        </main>
+
+        <!-- BOTTOM PANEL: Voice Transcription -->
+        <footer class="bottom-panel glass-panel">
+            <div class="transcription-box">
+                <div class="speaker user" id="user-transcript">
+                    <span class="label">USER:</span>
+                    <span class="text">...</span>
+                </div>
+                <div class="speaker jarvis" id="jarvis-transcript">
+                    <span class="label">J.A.R.V.I.S.:</span>
+                    <span class="text">I am online and ready, sir.</span>
+                </div>
+            </div>
+            <!-- Manual input fallback -->
+            <div class="input-area">
+                <input type="text" id="manual-input" placeholder="Type command override..." autocomplete="off">
+                <button id="send-btn">EXECUTE</button>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

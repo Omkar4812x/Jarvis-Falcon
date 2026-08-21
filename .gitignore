@@ -1,0 +1,17 @@
+# Python .gitignore
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.env
+.env.local
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
