@@ -7,13 +7,13 @@
 ## ✨ Features
 
 - 🦅 **Falcon LLM Integration**
-  - Connects to Falcon LLM / HuggingFace Inference models for low-latency reasoning and chat responses.
+  - Connects to Falcon LLM / HuggingFace Inference models for low-latency reasoning and chat responses
 - 🎙️ **Speech & Audio Pipeline**
-  - Integrated speech recognition and pyttsx3 text-to-speech audio feedback.
+  - Integrated speech recognition and pyttsx3 text-to-speech audio feedback
 - 🗄️ **Local Database & History**
-  - Local database tracking chat interactions, system activity, and user preferences.
+  - Local database tracking chat interactions, system activity, and user preferences
 - 🌐 **Web Control Dashboard** (`web/`)
-  - Web UI for monitoring assistant status and issuing voice/text commands.
+  - Web UI for monitoring assistant status and issuing voice/text commands
 
 ---
 
